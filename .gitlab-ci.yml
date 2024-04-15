@@ -24,5 +24,5 @@ docker-build:
     - docker push $DOCKER_IMAGE_TAG
   rules:
     - if: '$CI_COMMIT_BRANCH && exists("Dockerfile")'
-  only:
-    - master
+#  only:
+#    - master
