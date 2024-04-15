@@ -14,6 +14,15 @@ this project is focusing on gitlab CI, You could also use it as <br > a template
 ```bash
 docker build --tag go_simple_main:1.0.0 .
 docker run -p 8080:8080 go_simple_main:1.0.0
+OR
+docker-compose up -d
+```
+
+
+## You could also test it by doing:
+
+```bash
+curl -X GET http://127.0.0.1:8080/ping
 ```
 
 ## Contributing
