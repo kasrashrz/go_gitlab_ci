@@ -14,7 +14,7 @@ func TestSum(t *testing.T) {
 		{-1, 1, 0},     // Test case 2
 		{0, 0, 0},      // Test case 3
 		{100, -50, 50}, // Test case 4
-		{1, 2, 4},      // Test case 5  ** SHOULD FAIL **
+		//{1, 2, 4},      // Test case 5  ** SHOULD FAIL **
 	}
 
 	for _, test := range tests {
