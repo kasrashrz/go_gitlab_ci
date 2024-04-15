@@ -3,6 +3,14 @@
 ![alt text](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HtCjHzGwf6iWNqXu5Cndsg.png)
 this project is focusing on gitlab CI, You could also use it as <br > a template to initiate your projects
 
+## How it works
+there is a file named `.gitlab-ci.yml` which deals with gitlab CI.
+whenever you push your code to your gitlab repository it checks two stages: 
+* Build
+* Test:
+  * Test stage relates to calc package in the project which has a `SUM()` function and has a `calc_test.go` file that test multiple test cases. **If test cases goes successful means it passed the test stage**.
+
+
 ## Requirements
 
 * docker
