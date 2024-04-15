@@ -11,14 +11,12 @@ variables:
   DOCKER_IMAGE_TAG: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
 
 build:
-  stage: build
-  script:
-    - docker build -t $DOCKER_IMAGE_TAG .
-
-test:
   stage: test
   script:
+    - docker build -t $DOCKER_IMAGE_TAG .
     - docker run $DOCKER_IMAGE_TAG go test ./calc
+  rules:
+    - if: '$CI_COMMIT_BRANCH && exists("Dockerfile")'
 
 docker-build:
   stage: docker-build
@@ -29,6 +27,4 @@ docker-build:
   only:
     - master
   rules:
-    - if: $CI_COMMIT_BRANCH
-      exists:
-        - Dockerfile
+    - if: '$CI_COMMIT_BRANCH && exists("Dockerfile")'
