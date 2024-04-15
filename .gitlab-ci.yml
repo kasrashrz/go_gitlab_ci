@@ -7,6 +7,10 @@ stages:
   - test
   - docker-build
 
+
+before_script:
+  - go mod tidy
+
 variables:
   DOCKER_IMAGE_TAG: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
 
@@ -26,3 +30,4 @@ docker-build:
 #    - if: '$CI_COMMIT_BRANCH && exists("Dockerfile")'
   only:
     - master
+    - main
