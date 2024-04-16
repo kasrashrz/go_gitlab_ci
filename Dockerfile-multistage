@@ -12,6 +12,8 @@ RUN go build -o /main
 # Stage 2: Create the final lightweight image
 FROM alpine:latest
 
+RUN apk --no-cache add ca-certificates
+
 COPY --from=builder /main /main
 
 EXPOSE 8080
