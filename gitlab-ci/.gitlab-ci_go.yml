@@ -11,7 +11,7 @@ before_script:
 build:
   stage: build
   script:
-    - cd ../ && go build -o /main
+    - go build -o /main
   artifacts:
     paths:
       - main
@@ -19,4 +19,4 @@ build:
 test:
   stage: test
   script:
-    - cd ../ && go test ./calc
+    - go test ./calc

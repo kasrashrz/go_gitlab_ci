@@ -1,3 +1,7 @@
 include:
-  project: "$CI_PROJECT_PATH/gitlab-ci"
-  file: "*.yml"
+  - local: "/gitlab-ci/.gitlab-ci_docker.yml"
+  - local: "/gitlab-ci/.gitlab-ci_go.yml"
+stages:
+  - test
+  - docker-build
+  - build
