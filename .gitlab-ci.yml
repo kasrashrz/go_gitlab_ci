@@ -3,6 +3,7 @@ include:
   - local: "/gitlab-ci/.gitlab-ci_go.yml"
 
 stages:
-  - test
+  - docker-test
   - docker-build
   - build
+  - test
