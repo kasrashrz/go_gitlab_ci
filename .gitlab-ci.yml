@@ -28,28 +28,6 @@ docker-build:
     - master
     - main
 
-before_script:
-  - go mod tidy
-  - go mod download
-
-build:
-  stage: build
-  image: golang:1.20-alpine
-  script:
-    - go build -o /main
-  artifacts:
-    paths:
-      - main
-
-test:
-  stage: test
-  image: golang:1.20-alpine
-  script:
-    - go test ./calc
-
-
-
-
 
 #include:
 #  - local: "/gitlab-ci/.gitlab-ci_docker.yml"
