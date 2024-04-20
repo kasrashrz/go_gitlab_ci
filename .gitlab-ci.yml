@@ -25,14 +25,3 @@ docker-build:
   only:
     - master
     - main
-
-
-#include:
-#  - local: "/gitlab-ci/.gitlab-ci_docker.yml"
-#  - local: "/gitlab-ci/.gitlab-ci_go.yml"
-#
-#stages:
-#  - docker-test
-#  - docker-build
-#  - build
-#  - test
